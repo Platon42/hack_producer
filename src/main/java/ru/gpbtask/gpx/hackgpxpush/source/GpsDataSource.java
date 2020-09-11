@@ -27,7 +27,7 @@ public class GpsDataSource {
         GpsSignalById[] gpsData = null;
         String s;
         try {
-            s = Files.readString(Paths.get("./data/part_csv.json"));
+            s = Files.readString(Paths.get("./data/last_part.json"));
             gpsData = objectMapper.readValue(s, GpsSignalById[].class);
         } catch (IOException e) {
             e.printStackTrace();

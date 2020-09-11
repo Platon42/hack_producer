@@ -13,11 +13,11 @@ public class LoadTest {
         String s = null;
         GpsSignalById[] gpsData = null;
         try {
-            s = Files.readString(Paths.get("./data/part_csv.json"));
+            s = Files.readString(Paths.get("./data/last_part.json"));
             gpsData = objectMapper.readValue(s, GpsSignalById[].class);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(gpsData.length);
+        System.out.println(gpsData[100].getLongitude());
     }
 }
